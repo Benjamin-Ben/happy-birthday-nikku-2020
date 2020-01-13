@@ -8,6 +8,7 @@
 body {
     background-color: #fff!important;
     color:#000!important;
+    position: relative;
 }
 
 #animation-section>* {
@@ -16,22 +17,77 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 
-    display: none;
-    /*animation-duration: 3s;
-    animation-name: animationTest;
-    animation-fill-mode: forwards;*/
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+    position: absolute;
+
+    visibility: hidden;    
 }
 
-
-@keyframes animationTest {
-    0%{
-        
-    }
-    100%{
-        transform: translateX(100px);
-    }
-}
 
 /* Animation Stuff =============================================================================================== */
 
+#test-animation-element{
+    animation-delay: 0s;
+    animation-name: animationTest;
+}
+    
+
+/* Test Animation before adding to actual keyframe*/
+@keyframes animationTest {
+    0% {
+        visibility:visible;
+        
+    }
+    
+    20% {
+
+    }
+
+    40% {
+        
+    }
+
+    60% {
+        
+    }
+
+    80% {
+        
+    }
+
+    100% {
+        visibility:hidden;
+    }
+}
+
+
 /* Keyframes ================================== */
+
+@keyframes animation-element-keyframe-number-1 {
+    0% {
+        visibility:visible;
+    }
+    
+    20% {
+
+    }
+
+    40% {
+        
+    }
+
+    60% {
+        
+    }
+
+    80% {
+        
+    }
+
+    100% {
+        visibility:hidden;
+    }
+    
+}
