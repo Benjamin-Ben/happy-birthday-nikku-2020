@@ -1,10 +1,10 @@
-// Change this to -3 when you don't need the test animation element
-let timeDelay = /*-3*/ 1110;
+// Change this to -2 when you don't need the test animation element
+let timeDelay = /*-2*/ 10000000;
 
 let animationSection = document.querySelector('#animation-section');
 
 for(let i = 1; i <= 100; i++ ) {
-    timeDelay += 3;
+    timeDelay += 2;
 
     let newDiv = document.createElement('div');
     newDiv.innerHTML = 'Happy Birthday<br>Nikku';
