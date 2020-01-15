@@ -1,5 +1,5 @@
 // Change this to -3 when you don't need the test animation element
-let timeDelay = /*-3*/ 0;
+let timeDelay = /*-3*/ 1110;
 
 let animationSection = document.querySelector('#animation-section');
 
