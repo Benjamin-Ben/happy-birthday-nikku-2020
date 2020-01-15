@@ -38,26 +38,7 @@ body {
 
 /* Test Animation before adding to actual keyframe*/
 @keyframes animationTest {
-    0% {
-        visibility:visible;
-        
-    }
-
-    25% {
-        transform: translateX(200px) translateY(0) scale(2);
-    }
-
-    50% {
-        transform: translateX(200px) translateY(200px) scale(0.5);
-    }
-
-    75% {
-        transform: translateX(-200px) translateY(200px) scale(3);
-    }
-
-    100% {
-        transform: translateX(-200px) translateY(0) scale(0);
-    }
+    
 }
 
 
@@ -208,7 +189,29 @@ body {
 }
 
 @keyframes animation-element-keyframe-number-7 {
-    
+    0% {
+        visibility:visible;  
+    }
+
+    25% {
+        transform: scale(3);
+    }
+
+    50% {
+        transform: scale(3) rotateX(180deg);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    75% {
+        transform: scale(1) rotateX(360deg);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: blueviolet;
+    }
+
+    100% {
+        transform: translateX(-200px) translateY(0) scale(0);
+        color: blueviolet;
+    }
 }
 
 @keyframes animation-element-keyframe-number-8 {
