@@ -6,582 +6,75 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: #ffb6c1 ;
     color:#000;
     position: relative;
+    overflow: hidden;
 }
 
-#animation-section>* {
-    font-size:42px;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+.shapes_animation_section {
+    height: 25vh;
+    display: flex;
+    padding: 10px 0;
+}
 
-    animation-duration: 2s;
+.shapes_animation_section > div {
+    flex: 1;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #e75480;
+    margin:0 3%;
+
+    animation-name: animation_shapes;
+    animation-duration: 0.65s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     animation-fill-mode: forwards;
+}
 
-    position: absolute;
-    left: 40%;
-    top:30vh;
-
-    visibility: hidden;    
+.shapes_animation_section > div:nth-of-type(2n) {
+    animation-direction: alternate-reverse!important;   
 }
 
 
-/* Animation Stuff =============================================================================================== */
-
-#test-animation-element{
-    animation-delay: 2s;
-    animation-name: animationTest;
-}
-    
-
-/* Test Animation before adding to actual keyframe*/
-@keyframes animationTest {
-    
+#happy_birthday_nikku {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+#happy_birthday_nikku h1 {
+    font-size:calc(4.5vw + 4.5vh);
+    color: #fff;
+    text-shadow: 0px 0px 5px #000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant-caps: all-petite-caps;
 
-/* Keyframes ================================== */
+    animation-name: animation_text;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
 
-@keyframes animation-element-keyframe-number-1 {
-    0% {
-        visibility:visible;  
-        transform: translateY(-200vh);
+@keyframes animation_shapes{
+    0%{
+        transform: scale(0.5);
     }
-    
-    20% {
-        transform: translateY(0) rotate(30deg);
-    }
-
-    40% {
-        transform: scale(3) rotate(60deg);
-    }
-
-    60% {
-        transform: rotateX(180deg) scale(1);
-    }
-
-    70% {
-       transform: scale(0.5) rotateX(360deg);
-    }
-
-    80% {
-        transform: scale(2);
-     }
-
-    100% {
-        transform: translateY(200vh) scale(0);
+    100%{
+        transform: scale(1);
     }
 }
 
-@keyframes animation-element-keyframe-number-2 {
-    0% {
-        visibility:visible;
+@keyframes animation_text {
+    0%{
+        transform: scale(0.7);
     }
-
-    50% {
-        transform: rotateX(360deg) scale(2);
+    100%{
+        transform: scale(1);
     }
-
-    100% {
-        transform: translateX(2000px) scale(0);
-        visibility:hidden;
-    }
-}
-
-@keyframes animation-element-keyframe-number-3 {
-    0% {
-        visibility:visible;
-    }
-
-    25% {
-        transform: scale(2) rotate(360deg);
-    }
-
-    50% {
-        transform: translateX(200px) scale(0.25);
-    }
-
-    75% {
-        transform: translateX(200px) translateY(-100px) scale(1.25);
-    }
-
-    100% {
-        transform: translateX(2000px) translateY(-100px)  scale(0);
-        visibility:hidden;
-    }
-}
-
-@keyframes animation-element-keyframe-number-4 {
-    0% {
-        visibility:visible;
-    }
-
-    25% {
-        transform: rotate(90deg) scaleX(1.5);
-        color: aqua;
-    }
-
-    50% {
-        transform: rotate(180deg) scaleX(1.5) scaleY(2);
-        color:purple;
-    }
-
-    75% {
-        transform:rotate(270deg) scaleX(2.5) scaleY(2);
-        color:darkorange;
-    }
-
-    99% {
-        transform: rotate(360deg) scaleX(2.5) scaleY(2.5);
-        color:blue;
-    }
-
-    100% {
-        transform: scale(0);
-    }
-}
-
-@keyframes animation-element-keyframe-number-5 {
-    0% {
-        visibility:visible;
-    }
-
-    25% {
-        transform: translateY(100px) scale(2);
-    }
-
-    50% {
-        transform: translateY(-100px) scale(0.5);
-    }
-
-    75% {
-        transform: translateY(200px) scale(3);
-    }
-
-    100% {
-        transform: translateY(-200px) scale(0);
-    }
-}
-
-@keyframes animation-element-keyframe-number-6 {
-    0% {
-        visibility:visible;
-        
-    }
-
-    25% {
-        transform: translateX(200px) translateY(0) scale(2);
-    }
-
-    50% {
-        transform: translateX(200px) translateY(200px) scale(0.5);
-    }
-
-    75% {
-        transform: translateX(-200px) translateY(200px) scale(3);
-    }
-
-    100% {
-        transform: translateX(-200px) translateY(0) scale(0);
-    }
-}
-
-@keyframes animation-element-keyframe-number-7 {
-    0% {
-        visibility:visible;  
-    }
-
-    25% {
-        transform: scale(3);
-    }
-
-    50% {
-        transform: scale(3) rotateX(180deg);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    75% {
-        transform: scale(1) rotateX(360deg);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: blueviolet;
-    }
-
-    100% {
-        transform: translateX(-200px) translateY(0) scale(0);
-        color: blueviolet;
-    }
-}
-
-@keyframes animation-element-keyframe-number-8 {
-    
-}
-
-@keyframes animation-element-keyframe-number-9 {
-    
-}
-
-@keyframes animation-element-keyframe-number-10 {
-    
-}
-
-@keyframes animation-element-keyframe-number-11 {
-    
-}
-
-@keyframes animation-element-keyframe-number-12 {
-    
-}
-
-@keyframes animation-element-keyframe-number-13 {
-    
-}
-
-@keyframes animation-element-keyframe-number-14 {
-    
-}
-
-@keyframes animation-element-keyframe-number-15 {
-    
-}
-
-@keyframes animation-element-keyframe-number-16 {
-    
-}
-
-@keyframes animation-element-keyframe-number-17 {
-    
-}
-
-@keyframes animation-element-keyframe-number-18 {
-    
-}
-
-@keyframes animation-element-keyframe-number-19 {
-    
-}
-
-@keyframes animation-element-keyframe-number-20 {
-    
-}
-
-@keyframes animation-element-keyframe-number-21 {
-    
-}
-
-@keyframes animation-element-keyframe-number-22 {
-    
-}
-
-@keyframes animation-element-keyframe-number-23 {
-    
-}
-
-@keyframes animation-element-keyframe-number-24 {
-    
-}
-
-@keyframes animation-element-keyframe-number-25 {
-    
-}
-
-@keyframes animation-element-keyframe-number-26 {
-    
-}
-
-@keyframes animation-element-keyframe-number-27 {
-    
-}
-
-@keyframes animation-element-keyframe-number-28 {
-    
-}
-
-@keyframes animation-element-keyframe-number-29 {
-    
-}
-
-@keyframes animation-element-keyframe-number-30 {
-    
-}
-
-@keyframes animation-element-keyframe-number-31 {
-    
-}
-
-@keyframes animation-element-keyframe-number-32 {
-
-}
-
-@keyframes animation-element-keyframe-number-33 {
-
-}
-
-@keyframes animation-element-keyframe-number-34 {
-
-}
-
-@keyframes animation-element-keyframe-number-35 {
-
-}
-
-@keyframes animation-element-keyframe-number-36 {
-
-}
-
-@keyframes animation-element-keyframe-number-37 {
-
-}
-
-@keyframes animation-element-keyframe-number-38 {
-
-}
-
-@keyframes animation-element-keyframe-number-39 {
-
-}
-
-@keyframes animation-element-keyframe-number-40 {
-
-}
-
-@keyframes animation-element-keyframe-number-41 {
-
-}
-
-@keyframes animation-element-keyframe-number-42 {
-
-}
-
-@keyframes animation-element-keyframe-number-43 {
-
-}
-
-@keyframes animation-element-keyframe-number-44 {
-
-}
-
-@keyframes animation-element-keyframe-number-45 {
-
-}
-
-@keyframes animation-element-keyframe-number-46 {
-
-}
-
-@keyframes animation-element-keyframe-number-47 {
-
-}
-
-@keyframes animation-element-keyframe-number-48 {
-
-}
-
-@keyframes animation-element-keyframe-number-49 {
-
-}
-
-@keyframes animation-element-keyframe-number-50 {
-
-}
-
-@keyframes animation-element-keyframe-number-51 {
-
-}
-
-@keyframes animation-element-keyframe-number-52 {
-
-}
-
-@keyframes animation-element-keyframe-number-53 {
-
-}
-
-@keyframes animation-element-keyframe-number-54 {
-
-}
-
-@keyframes animation-element-keyframe-number-55 {
-
-}
-
-@keyframes animation-element-keyframe-number-56 {
-
-}
-
-@keyframes animation-element-keyframe-number-57 {
-
-}
-
-@keyframes animation-element-keyframe-number-58 {
-
-}
-
-@keyframes animation-element-keyframe-number-59 {
-
-}
-
-@keyframes animation-element-keyframe-number-60 {
-
-}
-
-@keyframes animation-element-keyframe-number-61 {
-
-}
-
-@keyframes animation-element-keyframe-number-62 {
-
-}
-
-@keyframes animation-element-keyframe-number-63 {
-
-}
-
-@keyframes animation-element-keyframe-number-64 {
-
-}
-
-@keyframes animation-element-keyframe-number-65 {
-
-}
-
-@keyframes animation-element-keyframe-number-66 {
-
-}
-
-@keyframes animation-element-keyframe-number-67 {
-
-}
-
-@keyframes animation-element-keyframe-number-68 {
-
-}
-
-@keyframes animation-element-keyframe-number-69 {
-
-}
-
-@keyframes animation-element-keyframe-number-70 {
-
-}
-
-@keyframes animation-element-keyframe-number-71 {
-
-}
-
-@keyframes animation-element-keyframe-number-72 {
-
-}
-
-@keyframes animation-element-keyframe-number-73 {
-
-}
-
-@keyframes animation-element-keyframe-number-74 {
-
-}
-
-@keyframes animation-element-keyframe-number-75 {
-
-}
-
-@keyframes animation-element-keyframe-number-76 {
-
-}
-
-@keyframes animation-element-keyframe-number-77 {
-
-}
-
-@keyframes animation-element-keyframe-number-78 {
-
-}
-
-@keyframes animation-element-keyframe-number-79 {
-
-}
-
-@keyframes animation-element-keyframe-number-80 {
-
-}
-
-@keyframes animation-element-keyframe-number-81 {
-
-}
-
-@keyframes animation-element-keyframe-number-82 {
-
-}
-
-@keyframes animation-element-keyframe-number-83 {
-
-}
-
-@keyframes animation-element-keyframe-number-84 {
-
-}
-
-@keyframes animation-element-keyframe-number-85 {
-
-}
-
-@keyframes animation-element-keyframe-number-86 {
-
-}
-
-@keyframes animation-element-keyframe-number-87 {
-
-}
-
-@keyframes animation-element-keyframe-number-88 {
-
-}
-
-@keyframes animation-element-keyframe-number-89 {
-
-}
-
-@keyframes animation-element-keyframe-number-90 {
-
-}
-
-@keyframes animation-element-keyframe-number-91 {
-
-}
-
-@keyframes animation-element-keyframe-number-92 {
-
-}
-
-@keyframes animation-element-keyframe-number-93 {
-
-}
-
-@keyframes animation-element-keyframe-number-94 {
-
-}
-
-@keyframes animation-element-keyframe-number-95 {
-
-}
-
-@keyframes animation-element-keyframe-number-96 {
-
-}
-
-@keyframes animation-element-keyframe-number-97 {
-
-}
-
-@keyframes animation-element-keyframe-number-98 {
-
-}
-
-@keyframes animation-element-keyframe-number-99 {
-
-}
-
-@keyframes animation-element-keyframe-number-100 {
-
 }
