@@ -49,7 +49,6 @@ body {
 #happy_birthday_nikku h1 {
     font-size:calc(4.5vw + 4.5vh);
     color: #fff;
-    text-shadow: 0px 0px 5px #000;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-variant-caps: all-petite-caps;
@@ -59,6 +58,12 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-fill-mode: forwards;
+
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    -o-text-stroke-width: 2px;
+    -o-text-stroke-color: black;
+
 }
 
 @keyframes animation_shapes{
@@ -77,4 +82,48 @@ body {
     100%{
         transform: scale(1);
     }
+}
+
+
+/* Color Select Menu Box ========================  */
+
+#colors-menu-box {
+    display: none;
+
+    color: #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    z-index: 100;
+
+    overflow-y: scroll;
+    padding: 30px 0;
+}
+
+#colors-menu-box section h1 {
+    font-size:40px;
+    margin: 0 0 10px 0;
+}
+
+#colors-menu-box section {
+    margin-bottom: 50px;
+}
+
+#colors-menu-box section div {
+    font-size:24px;
+    cursor: pointer;
+    transition: 300ms;
+
+    width:25%;
+    margin: 15px auto;
+
+}
+
+#colors-menu-box section div:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
 }
