@@ -6,6 +6,10 @@ document.querySelector('body').addEventListener('keyup', function (e) {
             document.querySelector('#colors-menu-box').style.display = 'none';
         };
     }
+
+    if (e.keyCode == 27) {
+        document.querySelector('#colors-menu-box').style.display = 'none';
+    }
 });
 
 const allShapes = document.querySelectorAll('.shapes_animation_section > div');
@@ -33,6 +37,18 @@ document.querySelector('.mint_green').addEventListener('click', function (e) {
 
     for (let i = 0; i < allShapes.length; i++) {
         allShapes[i].style.backgroundColor = 'green';
+    }
+    
+});
+
+// Light Blue
+document.querySelector('.light_blue').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = '#add8e6';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#00008b';
     }
     
 });
