@@ -52,3 +52,15 @@ document.querySelector('.light_blue').addEventListener('click', function (e) {
     }
     
 });
+
+// Black & White
+document.querySelector('.black_and_white').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = '#000000';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#ffffff';
+    }
+    
+});
