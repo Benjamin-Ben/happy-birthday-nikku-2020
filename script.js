@@ -64,3 +64,75 @@ document.querySelector('.black_and_white').addEventListener('click', function (e
     }
     
 });
+
+// Red
+document.querySelector('.red').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'red';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#8b0000';
+    }
+    
+});
+
+// Blue
+document.querySelector('.blue').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'blue';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#00008b';
+    }
+    
+});
+
+// Yellow
+document.querySelector('.yellow').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'yellow';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#DAA520';
+    }
+    
+});
+
+// Orange
+document.querySelector('.orange').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'orange';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#cd7000';
+    }
+    
+});
+
+// Purple
+document.querySelector('.purple').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'purple';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#32174d';
+    }
+    
+});
+
+// Green
+document.querySelector('.green').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'green';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#006400';
+    }
+    
+});
