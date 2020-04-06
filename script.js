@@ -136,3 +136,44 @@ document.querySelector('.green').addEventListener('click', function (e) {
     }
     
 });
+
+// Brown
+document.querySelector('.brown').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'brown';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#362204';
+    }
+    
+});
+
+// Gray
+document.querySelector('.gray').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    document.querySelector('body').style.backgroundColor = 'gray';
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = '#555555';
+    }
+    
+});
+
+// RANDOM COLORS
+document.querySelector('.random_colors').addEventListener('click', function (e) {
+    document.querySelector('#colors-menu-box').style.display = 'none';
+
+    // Generating Random Numbers between 30 and 255 and puts each random number in a const
+    const r = Math.round(Math.random() * (255 - 30) + 30);
+    const g = Math.round(Math.random() * (255 - 30) + 30);
+    const b = Math.round(Math.random() * (255 - 30) + 30);
+
+    document.querySelector('body').style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+    for (let i = 0; i < allShapes.length; i++) {
+        allShapes[i].style.backgroundColor = `rgb(${r - 25}, ${g - 25}, ${b - 25})`;
+    }
+    
+});
