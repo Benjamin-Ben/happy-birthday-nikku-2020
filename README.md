@@ -13,7 +13,7 @@
 
 
 ###  You Can Watch My YouTube Video About This Project Here:
-https://www.youtube.com/watch?v=aGem1eelRGM
+https://www.youtube.com/watch?v=G-xmr4044fE
 
 ---
 
@@ -23,11 +23,11 @@ https://www.youtube.com/watch?v=aGem1eelRGM
 ---
 
 ## My Stuff
-* YouTube       =   https://www.youtube.com/channel/UCicEdBSZ_3rVGXFg3H0V2QQ
+* YouTube       =   https://www.youtube.com/c/benjaminblochbowden
 
-* Twitter       =   https://twitter.com/benjaminpodcast
+* Twitter       =   https://twitter.com/BenjaminBowden
 
-* Patreon       =   https://www.patreon.com/BenjaminPodcast
+* Patreon       =   https://www.patreon.com/BenjaminBlochBowden
 
 * GitHub        =   https://github.com/Benjamin-Ben
 
